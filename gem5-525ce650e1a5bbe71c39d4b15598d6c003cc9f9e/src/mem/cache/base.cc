@@ -1070,10 +1070,10 @@ BaseCache::access(PacketPtr pkt, CacheBlk *&blk, Cycles &lat,
         satisfyRequest(pkt, blk);
         maintainClusivity(pkt->fromCache(), blk);
 
-        if (blk->isWritable()) {
-    	    PacketPtr writeclean_pkt = writecleanBlk(blk, pkt->req->getDest(), pkt->id);
-    	    writebacks.push_back(writeclean_pkt);
-	}
+        //if (blk->isWritable()) {
+    	//    PacketPtr writeclean_pkt = writecleanBlk(blk, pkt->req->getDest(), pkt->id);
+    	//    writebacks.push_back(writeclean_pkt);
+	//}
 
         return true;
     }
